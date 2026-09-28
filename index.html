@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MAIMBO SIANYAKA ICT251 STUDENT PORTFOLIO</title>
+        <link re="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+        <h1>Hi, I'm Maimbo Sianyaka</h1>
+        <p>Computer Science student at Mulunggushi University</p>
+        </header>
+
+        <nav aria-label="Main navigation">
+            <a href="#about">About Me</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#plan">Learning plan</a>
+            <a href="#photos">Photos</a>
+            <a href="#media">Media</a>
+            <a href="#contact">Contact</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development"target="_blank" rel="noopener">MDN: Learn Web Development</a>
+        </nav>
+
+        <main>
+            <section id="hobbies"class="content-sector">
+                <h2>About Me</h2>
+                <p>
+                    I am a second year student learning at Mulungushi University. I come from Lusaka within Zambia.
+                    Currently studying under the program of Computer Science, I undertook this bachelors because I enjoy solvinng problems.
+                    Building things people can use to benefit them is an interest of mine and with computer science I can achieve this.
+                    This course is teaching me how to design and develop websites and how they work. I intend to build websites that benefit the populace at large
+                </p>
+            </section>
+
+            <section id="hobbies"class="content-section">
+                <ul>
+                    <li>Gaming</li>
+                    <li>Formula 1</li>
+                    <li>Football</li>
+                </ul>
+            </section>
+
+            <section id="plan"class="content-section">
+                <h2>My Learnng Plan</h2>
+                <h3>Steps to improve my web skills</h3>
+                <ol>
+                    <li>Finish the HTML and CSS lessons and rebuild this page from memory</li>
+                    <li>Build one small project monthly, such as a to-do list</li>
+                    <li>Learn JavaScript basics and add simple interactivity to my website</li>
+                </ol>
+
+                <div class="table wrap">
+                    <table>
+                        <caption>My weekly Web learning plan</caption>
+                        <thead>
+                            <tr><th>Day</th><th>Topic</th><th>Task</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Tuesday</td><td>HTML structure</td><td>Add semantic tags</td></tr>
+                            <tr><td>Thursday</td><td>CSS</td><td>Build a photo page</td></tr>
+                            <tr><td>Saturday</td><td>Forms</td><td>Create and validate a contact form</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="photos"class="content-section">
+                <h2>My Photos</h2>
+                <h3>Photo gallery</h3>
+                <div class="gallery">
+                    <figure>
+                        <img src="images/1790583042500.jpg"alt="Entance of Mulungushi Universuty">
+                        <figcaption>Mulungushi university</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/IMG_78687c26-0e3e-4fd3-b6dc-ddf5441496a4.webp"alt="The ICT Center of the University">
+                        <figcaption>ICT Center</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/Snapchat-301104276.jpg"alt="Me carrying out one of my hobbies">
+                        <figcaption>Gaming</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="media"class="content-section">
+                <h2>My Media</h2>
+                <video controls preload="metadata">
+                    <source src="videos/intro.mp4"type="video/mp4">
+                    Your browser does not support the video tag
+                </video>
+                <p>A short video of myself giving an introduction about myself</p>
+                <p><strong>Summary</strong>My name is Maimbo Sianyaka. I'm currently studying Bachelors of Science in Computer Science.
+                I hope to learn more web skills, just I've learnt the web skill to CSS layout</p>
+
+                <h3>Audio Clip</h3>
+                <audio controls preload="metadata">
+                    <source src="videos/Voice123.m4a"type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p>In this audio clip, I am talking about my hobbies and reasons for undertaking this field of study</p>
+            </section>
+
+            <section id="contact"class="content-section">
+                <h2>Contact</h2>
+                <p><em>This form is a browser demonstration only, it does not send your data anywhere</em></p>
+                <form action="#"method="get">
+                    <label for="name">Name</label>
+                    <input type="text"id="name"name="name"required>
+
+                    <label for="email">Email</label>
+                    <input type="email"id="email"name="email"required>
+
+                    <label for="topic">Topic</label>
+                    <select id="topic"name="topic">
+                        <option>General question</option>
+                        <option>Feedback</option>
+                    </select>
+
+                    <label for="message">Message</label>
+                    <textarea id="message"name="message"rows="5"required></textarea>
+
+                    <button type="submit">Send message</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy;2026, Maimbo Sianyaka ICT251 Web Technologies, Mulungushi University</p>
+        </footer>
+        
+    </body>
+</html>
