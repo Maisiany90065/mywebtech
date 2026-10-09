@@ -4,25 +4,31 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MAIMBO SIANYAKA ICT251 STUDENT PORTFOLIO</title>
-        <link re="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src ="js/script.js" defer></script>
     </head>
     <body>
-        <header>
+        <a class="skip-link" href = "#main-content">Skip to main content</a>
+        <header class="site-header">
         <h1>Hi, I'm Maimbo Sianyaka</h1>
-        <p>Computer Science student at Mulunggushi University</p>
+        <p class="tagline">BSc Computer Science student at Mulunggushi University</p>
+        <p class="intro">Second Year Computer student from Lusaka, Zambia, learning to design and build websites that solve real problems</p>
+        <a class="button" href ="#projects">View My Projects</a>
+        <button type="button" id="theme-toggle" class="button button-secondary" aria-pressed="false">&#127769; Dark mode</button>
         </header>
 
-        <nav aria-label="Main navigation">
+        <nav class="main-nav" aria-label="Main navigation">
             <a href="#about">About Me</a>
             <a href="#hobbies">Hobbies</a>
             <a href="#plan">Learning plan</a>
+            <a href="#projects">My Projects</a>
             <a href="#photos">Photos</a>
             <a href="#media">Media</a>
             <a href="#contact">Contact</a>
             <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development"target="_blank" rel="noopener">MDN: Learn Web Development</a>
         </nav>
 
-        <main>
+        <main id="main-content">
             <section id="hobbies"class="content-sector">
                 <h2>About Me</h2>
                 <p>
@@ -65,22 +71,63 @@
                 </div>
             </section>
 
+            <section id="projects" class="content-section">
+                <h2>My Projects</h2>
+                <p>Example of What I have built or practised so far. Use the filters or search to explore them</p>
+
+                <div class="filter-bar" role="group" aria-label="Filter projects">
+                    <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                    <button type="button" class="filter-btn" data-filter="html" aria-pressed="false">HTML</button>
+                    <button type="button" class="filter-btn" data-filter="css" aria-pressed="false">CSS</button>
+                    <button type="button" class="filter-btn" data-filter="js" aria-pressed="false">JavaScript</button>
+                    <input type="search" id="projects-search" placeholder="Search prjects.." aria-label="Search Projects">
+                    <button type="button" id="filter-reset" class="filter-btn">Reset</button>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="projects card" data-category="html">
+                        <h3>Personal PortFolio Website</h3>
+                        <p class="project-tag">HTML</p>
+                        <p>A multi-section personal portfolio built with semantic HTM5 elements such as header, nav, main, section and footer.</p>
+                    </article>
+                     <article class="projects card" data-category="css">
+                        <h3>Reponsive Photo Gallery</h3>
+                        <p class="project-tag">CSS</p>
+                        <p>A photo gallery page styled with CSS, using flexible layouts, borders and the box model so images line up neatly</p>
+                    </article>
+                     <article class="projects card" data-category="js">
+                        <h3>PContact Form Validation</h3>
+                        <p class="project-tag">JavaScript</p>
+                        <p>A browser onnly contact form that validates names, emails and messages with JavaScript and shows a local preview without reloading.</p>
+                    </article>
+                     <article class="projects card" data-category="html">
+                        <h3>Weekly Study Planner Table</h3>
+                        <p class="project-tag">HTML</p>
+                        <p>A structured learning timetable .</p>
+                    </article>
+                </div>
+            </section>
+
             <section id="photos"class="content-section">
                 <h2>My Photos</h2>
                 <h3>Photo gallery</h3>
-                <div class="gallery">
+                <div class="gallery-viwer">
                     <figure>
-                        <img src="images/1790583042500.jpg"alt="Entance of Mulungushi Universuty">
-                        <figcaption>Mulungushi university</figcaption>
+                        <img id="gallery-image" src="images/1790583042500.jpg"alt="Entance of Mulungushi Universuty">
+                        <figcaption><span id="gallery-caption">Mulungushi University</span> &mdash;<span id="gallery-counter">Photo 1 of 3</span></figcaption>
                     </figure>
                     <figure>
-                        <img src="images/IMG_78687c26-0e3e-4fd3-b6dc-ddf5441496a4.webp"alt="The ICT Center of the University">
+                        <img id="gallery-image" src="images/IMG_78687c26-0e3e-4fd3-b6dc-ddf5441496a4.webp"alt="The ICT Center of the University">
                         <figcaption>ICT Center</figcaption>
                     </figure>
                     <figure>
                         <img src="images/Snapchat-301104276.jpg"alt="Me carrying out one of my hobbies">
                         <figcaption>Gaming</figcaption>
                     </figure>
+                    <div class="gallery-controls">
+                        <button type="button" id="gallery-prev" class="button">&larr; Previous</button>
+                        <button type="button" id="gallery-next" class="button">Next &rarr;</button>
+                    </div>
                 </div>
             </section>
 
@@ -108,9 +155,11 @@
                 <form action="#"method="get">
                     <label for="name">Name</label>
                     <input type="text"id="name"name="name"required>
+                    <p class="field-error" id="name-error"></p>
 
                     <label for="email">Email</label>
                     <input type="email"id="email"name="email"required>
+                    <p class="field-error" id="email-error"></p>
 
                     <label for="topic">Topic</label>
                     <select id="topic"name="topic">
@@ -120,14 +169,17 @@
 
                     <label for="message">Message</label>
                     <textarea id="message"name="message"rows="5"required></textarea>
+                    <p class="field-error" id="message-error"></p>
 
-                    <button type="submit">Send message</button>
+                    <button type="submit" class="button">Send message</button>
                 </form>
+                <div id="form-preview" class="form-preview" aria-live="polite" hidden></div>
             </section>
         </main>
 
         <footer>
             <p>&copy;2026, Maimbo Sianyaka ICT251 Web Technologies, Mulungushi University</p>
+            <p><a href="https://github.com/Maisiany90065/mywebtech" target="_blank" rel=""noopener">View Source on GitHub</a></p>
         </footer>
         
     </body>
