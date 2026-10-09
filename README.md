@@ -1,6 +1,6 @@
 Maimbo Sianyaka - ICT251 Personal Portfolio 
 A responsive, interactive personal portfolio built with plain HTML5, CSS and JavaScript. Enhanced from Activity 2 and deployed as a static site on Render via GitHub.
-Live site: <add your https://….onrender.com URL here>
+Live site: https://myportfolio.onrender.com
 JavaScript features (js/script.js)
 1.	Contact form validation + local preview (compulsory) - rejects empty or whitespace-only names/messages and invalid email addresses, shows clear error messages next to each field, and displays a local preview summary without reloading. event.preventDefault() keeps everything in the browser; the preview states that data was validated, not delivered.
 2.	Gallery viewer - Previous / Next buttons cycle through the three photos and update the caption and counter; wraps correctly at the first and last photo.
